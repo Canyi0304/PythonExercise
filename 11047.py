@@ -1,12 +1,13 @@
-num, money = map(int, input().split())
+N, K = map(int, input().split())
 
-coins = [int(input()) for _ in range(num)]
+coins = [int(input()) for _ in range(N)]
 coins.reverse()
 
 answer = 0
+
 for coin in coins:
-    answer += money // coin
-    money %= coin
-    print(f'coin: {coin}, money: {money}, answer: {answer}')
+    answer += K // coin
+    K %= coin
+    # print(f'coin: {coin}, money: {K}, answer: {answer}')
 
 print(answer)
