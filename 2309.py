@@ -1,13 +1,16 @@
-# combinations 사용
-# from itertools import combinations
-#
-# input_num = [int(input()) for _ in range(9)]
-#
-# combi_sort = []
-# for combi in combinations(input_num, 7):
-#     if sum(combi) == 100:
-#         combi_sort = sorted(combi)
-#
-#         for i in combi_sort:
-#             print(i)
+input_num = [int(input()) for _ in range(9)]
+input_num.sort()
+tot_num = sum(input_num)
 
+
+def f():
+    for i in range(8):
+        for j in range(i+1,9):
+            if tot_num - input_num[i] - input_num[j] == 100:
+                for k in range(9):
+                    if i != k and j != k:
+                        print(input_num[k])
+                return
+
+
+f()
