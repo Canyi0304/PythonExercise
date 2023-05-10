@@ -20,3 +20,9 @@ while x < 1001:
         x += 1
 
 print(answer)
+
+
+# 좌표 압축
+# N, L = map(int, input().split())
+# coord = list(map(int, input().split()))
+# print(coord)
