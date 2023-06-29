@@ -16,7 +16,7 @@ for i in range(N):
 
 # 임의의 두 칸 (r1, c1)과 (r2, c2) 사이의 거리는 |r1-r2| + |c1-c2|
 def get_dist(a, b):
-    return abs(a[0] - b[0] + abs(a[1] - b[1]))
+    return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 
 # 도시의 치킨 거리의 최솟값
@@ -27,6 +27,7 @@ for combi in combinations(chickens, M):
     total = 0
     for house in houses:
         total = total + min(get_dist(house, chicken) for chicken in combi)
+    #print(f'combi: {combi}, total: {total}')
     ans = min(ans, total)
 
 print(ans)
